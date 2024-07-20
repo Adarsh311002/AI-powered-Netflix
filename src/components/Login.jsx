@@ -14,11 +14,11 @@ const Login = () => {
      }
 
      const handleValidation = () => {
-      console.log(email.current.value)
-      console.log(password.current.value)
+      // console.log(email.current.value)
+      // console.log(password.current.value)
 
       const message = Validate(email.current.value,password.current.value)
-      console.log(message)
+      // console.log(message)
 
       setErrorMessage(message)
 
