@@ -46,7 +46,7 @@ const Header = () => {
 
   return (
     <div className='absolute bg-gradient-to-b from-black w-screen z-30 flex justify-between'>
-      <img className=' w-48 mx-20 ' src={LOGO} 
+      <img className={` w-48 mx-12 ${user && 'w-40'}`}  src={LOGO} 
       alt="logo" 
       />
 
