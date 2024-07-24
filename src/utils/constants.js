@@ -8,7 +8,7 @@ export const options = {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwYTU0MzFhNjZiNGZhNTE1NTM5NzI2OTIzMWFhNGZhYSIsIm5iZiI6MTcyMTgxODY1My43MTQxNzcsInN1YiI6IjY2YTA4MTIwNmRjYmMxOTQwYjQwMzg1ZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.OK6Thv6EzciFV-JeDEIRoyT6Kcu_AzVhA4I6ZVteaxk'
+      Authorization: import.meta.env.AUTHORIZATION
     }
   };
   
