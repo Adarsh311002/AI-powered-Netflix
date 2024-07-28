@@ -5,6 +5,8 @@ import { useNavigate, } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { addUser, removeUser } from '../utils/userSlice';
 import { LOGO } from '../utils/constants';
+import { goForSearch } from '../utils/GPTSlice';
+
 
 
 
@@ -14,6 +16,7 @@ const Header = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
   const user = useSelector(store => store.user)
+  
 
   const handleSignOut = () => {
     signOut(auth).then(() => {
@@ -44,19 +47,24 @@ const Header = () => {
 
    },[])
 
+   const handeleGPTSearch = () => {
+    dispatch(goForSearch())
+   }
+
   return (
     <div className='absolute bg-gradient-to-b from-black w-screen z-30 flex justify-between'>
-      <img className={` w-48 mx-12 ${user && 'w-40'}`}  src={LOGO} 
+      <img className={` w-56 mx-12  ${user && 'w-40 '}`}  src="../src/assets/1.png" 
       alt="logo" 
       />
 
       {
       user &&       
-        <div className='mx-28 my-5 w-12 h-12 flex'>
+        <div className=' my-5 h-12 flex'>
+        <button onClick={handeleGPTSearch} className='text-white bg-red-500 px-6 mr-2 rounded-md font-bold'>GPT-Search</button>
         <img src= {user.photoURL}
          alt="signout" 
          />
-         <button onClick={handleSignOut} className='font-bold text-white px-2'>(SignOut)</button>
+         <button onClick={handleSignOut} className='font-bold text-white px-2 pr-16'>(SignOut)</button>
       </div>
       }
     </div>
