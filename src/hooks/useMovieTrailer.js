@@ -5,6 +5,7 @@ import { options } from "../utils/constants"
 
  const useMovieTrailer = (movieId) => {
     const dispatch = useDispatch()
+    const movieTrailer = useSelector(store => store.movies.trailerVideo)
     
 
   const getMovieVideos = async () => {
@@ -15,11 +16,11 @@ import { options } from "../utils/constants"
     const filterData = json.results.filter(video => video.type == "Trailer")
     const trailer = filterData.length ? filterData[0] : json.results[0]
     dispatch(addTrailerVideo(trailer))
-    // console.log(trailer)
+    // console.log(trailer) 
   }
 
   useEffect(()=>{
-    getMovieVideos()
+    !movieTrailer && getMovieVideos()
   },[])
 }
 
