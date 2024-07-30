@@ -63,14 +63,14 @@ const Header = () => {
   return (
     <div className="absolute bg-gradient-to-b from-black w-screen z-30 flex justify-between">
       <img
-        className={` w-56 mx-12  ${user && "w-40 "}`}
+        className={`w-36 md:w-56 mx-4  md:mx-12  ${user && "w-16 h-12 md:h-24 md:w-56 "}`}
         src="../src/assets/1.png"
         alt="logo"
       />
 
       {user && (
-        <div className=" my-5 h-12 flex">
-        {showGptSearch && <select className="p-4 m-4 bg-gray-900 text-white" onChange={handleChangeLanguage}>
+        <div className="my-3 md:my-5 md:h-12 h-6 text-sm mr-2 flex">
+        {showGptSearch && <select className="p-2  md:px-3 hidden bg-gray-900 text-white" onChange={handleChangeLanguage}>
           {SUPPORTED_LANGUAGES.map((lang) => (
             <option key={lang.identifier} value={lang.identifier} >
               {lang.name}
@@ -79,14 +79,14 @@ const Header = () => {
         </select>}
           <button
             onClick={handeleGPTSearch}
-            className="text-white bg-red-500 px-6 mr-2 rounded-md font-bold"
+            className="text-white text-sm bg-red-500 px-2 mr-1 ml-18 md:px-6 md:mr-2 rounded-md md:font-bold"
           >
             {showGptSearch ? "Home" : "GPT-Search"}
           </button>
-          <img src={user.photoURL} alt="signout" />
+          <img className='hidden md:block' src={user.photoURL} alt="signout" />
           <button
             onClick={handleSignOut}
-            className="font-bold text-white px-2 pr-16"
+            className="font-bold text-white md:px-2 md:pr-16"
           >
             (SignOut)
           </button>
