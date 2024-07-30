@@ -1,9 +1,12 @@
 import React from 'react'
 
 const GptMovieSuggest = () => {
+
+  
+
   return (
     <div>
-      Suggestion
+      
     </div>
   )
 }
