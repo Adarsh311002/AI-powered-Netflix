@@ -4,8 +4,8 @@ import { BsInfoCircle } from "react-icons/bs";
 
 const VideoTitle = ({title, overview}) => {
   return (
-    <div className='bg-gradient-to-r from-black w-screen aspect-video z-10 absolute text-white pt-24 md:pt-60 px-6 md:px-16 overflow-hidden'>
-      <h1 className='md:font-bold text-sm md:text-5xl '>{title}</h1>
+    <div className='bg-gradient-to-r from-black w-screen h-screen aspect-video z-10 absolute text-white pt-44 md:pt-60 px-6 md:px-16 overflow-hidden'>
+      <h1 className='md:font-bold text-lg font-semibold md:text-5xl '>{title}</h1>
       <p className=' text-gray-300 hidden md:block text-lg py-6 w-1/3'>{overview}</p>
 
       <div className='flex'>

@@ -80,10 +80,10 @@ const GptSeachBar = () => {
           ref={text}
           type="text"
           placeholder={lang[Slang].gptSearchPlaceholder}
-          className="p-4 m-3 col-span-8 md:col-span-9"
+          className="md:p-4 p-3 m-2 md:m-3 col-span-8 md:col-span-9"
         />
         <button
-          className="text-white bg-red-500 px-6 m-3  font-bold col-span-4 md:col-span-3"
+          className="text-white bg-red-500 px-4 m-2 md:m-3 rounded md:rounded-none font-bold col-span-4 md:col-span-3"
           onClick={handleGptSearch}
         >
           {lang[Slang].search}
