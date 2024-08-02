@@ -20,7 +20,7 @@ const GptSeachBar = () => {
   }
 
   const handleGptSearch = async () => {
-    console.log(text.current.value);
+    // console.log(text.current.value);
 
     // try {
     //   const GptQuery =
@@ -57,7 +57,7 @@ const GptSeachBar = () => {
         model: "llama3-8b-8192",
       });
 
-      console.log(chatCompletion.choices?.[0]?.message?.content);
+      // console.log(chatCompletion.choices?.[0]?.message?.content);
    
 
     const gptMovies = chatCompletion.choices?.[0]?.message?.content.split(",");
@@ -65,7 +65,7 @@ const GptSeachBar = () => {
     const promiseArray = gptMovies.map((movie) => searchMoviesTmdb(movie))
 
     const tmdbResults = await Promise.all(promiseArray)
-    console.log(tmdbResults)
+    // console.log(tmdbResults)
 
     dispatch(addGptMovie({movieNames :gptMovies, movieResults : tmdbResults }))
   };
