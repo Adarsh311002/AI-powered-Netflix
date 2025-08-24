@@ -81,7 +81,7 @@ const Login = () => {
       <Header />
       <div className="absolute">
         <img
-          className=" h-screen w-screen object-cover"
+          className=" h-100% w-screen object-cover"
           src={HOME_BG}
           alt="picture"
         />
@@ -90,6 +90,21 @@ const Login = () => {
         onSubmit={(e) => e.preventDefault()}
         className="absolute md:w-[500px] bg-black my-40 md:my-48 mx-6 md:mx-auto right-0 left-0 bg-opacity-80 text-white md:px-4 py-4 flex flex-col space-y-6 rounded-lg"
       >
+         <div className="flex  ">
+            Github repo Link :
+          <a
+          className="px-3"
+            href="https://github.com/Adarsh311002/AI-powered-Netflix"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+              alt="GitHub Repo"
+              className="w-10 h-10 hover:scale-110 transition-transform duration-200 rounded-2xl"
+            />
+          </a>
+        </div>
         <h1 className="font-bold text-3xl md:text-4xl py-2 md:py-4 px-12">
           {isSignInForm ? "Sign In" : "Sign up"}
         </h1>
@@ -125,6 +140,7 @@ const Login = () => {
             ? "New to Netflix? Sign up now."
             : "Already a user? Sign in"}
         </button>
+         
       </form>
     </div>
   );
