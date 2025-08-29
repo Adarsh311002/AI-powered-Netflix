@@ -77,23 +77,25 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <Header />
-      <div className="absolute">
-        <img
-          className=" h-100% w-screen object-cover"
-          src={HOME_BG}
-          alt="picture"
-        />
-      </div>
+
+<div className="relative w-full min-h-screen flex items-center justify-center">
+  {/* Background */}
+  <div className="absolute inset-0">
+    <img
+      src={HOME_BG}
+      alt="background"
+      className="w-full h-full object-cover"
+    />
+    <div className="absolute inset-0 bg-black/50" /> {/* Optional overlay */}
+  </div>
       <form
         onSubmit={(e) => e.preventDefault()}
         className="absolute md:w-[500px] bg-black my-40 md:my-48 mx-6 md:mx-auto right-0 left-0 bg-opacity-80 text-white md:px-4 py-4 flex flex-col space-y-6 rounded-lg"
       >
-         <div className="flex  ">
+         <div className="flex justify-center  ">
             Github repo Link :
           <a
-          className="px-3"
+            className="px-3"
             href="https://github.com/Adarsh311002/AI-powered-Netflix"
             target="_blank"
             rel="noopener noreferrer"
@@ -101,7 +103,7 @@ const Login = () => {
             <img
               src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
               alt="GitHub Repo"
-              className="w-10 h-10 hover:scale-110 transition-transform duration-200 rounded-2xl"
+              className="w-7 h-7 hover:scale-110 transition-transform duration-200 rounded-2xl"
             />
           </a>
         </div>
